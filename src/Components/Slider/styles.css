@@ -18,7 +18,7 @@ img{
     border-radius:50%;
     background-color:blue;
     color:white;
-    top:150px; /*50%;*/
+    top: 260px; /* 50%;*/ /*150px*/
     z-index:+1;
     border-width:0;
     width:40px;
