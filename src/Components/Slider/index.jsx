@@ -58,7 +58,7 @@ class Slider extends React.Component {
         autoScrollOn ?  this.stopAutoScroll() : this.startAutoScroll();
         this.setState({autoScrollOn: !this.state.autoScrollOn});
         //
-        alert("Auto scroll mode: "+this.state.autoScrollOn);
+        //alert("Auto scroll mode: "+this.state.autoScrollOn);
      }
 
     startAutoScroll=()=>{
