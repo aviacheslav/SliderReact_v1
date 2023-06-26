@@ -48,12 +48,12 @@ class Slider extends React.Component {
             this.startAutoScroll();
         }
     }*/
-    timerIntervalSwitcherClickHandler=(e)=>{
+    timIntervalSetupClickHandler=(e)=>{
         let val=+e.target.value;
         this.setState({timeInternalMs: val});
     }
 
-    timerSwitcherClickHandler=()=>{
+    timerToggleOnOffClickHandler=()=>{
         const {autoScrollOn} = this.state;
         autoScrollOn ?  this.stopAutoScroll() : this.startAutoScroll();
         this.setState({autoScrollOn: !this.state.autoScrollOn});
@@ -105,8 +105,8 @@ class Slider extends React.Component {
                 <h1>Enjoy our Universe</h1>
                 <label htmlFor="autoScrollSwitcher">AutoScroll </label>
                 <label htmlFor="timerIntervalSet">Timer interval </label>
-                <input type="checkbox" id="autoScrollSwitcher" value="AutoScrollMode" onChange={this.timerSwitcherClickHandler } checked={autoScrollOn}></input> 
-                <input type="number" id="timerIntervalSet" defaultValue="1000" onChange={this.timerIntervalSwitcherClickHandler } checked={autoScrollOn}/>
+                <input type="checkbox" id="autoScrollSwitcher" value="AutoScrollMode" onChange={this.timerToggleOnOffClickHandler } checked={autoScrollOn}></input> 
+                <input type="number" id="timerIntervalSet" defaultValue="1000" onChange={this.timIntervalSetupClickHandler } checked={autoScrollOn}/>
                 
             </div>    
             <main>
